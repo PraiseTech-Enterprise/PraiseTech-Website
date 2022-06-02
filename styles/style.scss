@@ -1,4 +1,19 @@
+:root{
+    --bg-color: #14232b;
+}
+
 body{
     margin: 0;
     padding: 0;
+    background-color: var(--bg-color);
+}
+
+.header{
+    width: 100%;
+    height: 12vh;
+    box-shadow: 0 0 3px 2px #00000033;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
 }
