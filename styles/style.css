@@ -25,5 +25,14 @@ body {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  position: fixed;
+}
+
+.header > .logo > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6rem;
+  height: 6rem;
 }
 /*# sourceMappingURL=style.css.map */
