@@ -3,6 +3,11 @@
   src: url("../assets/Roboto-Medium.ttf");
 }
 
+@font-face {
+  font-family: "Grand";
+  src: url("../assets/grand.ttf");
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -237,7 +242,7 @@
 }
 
 .homeTitle {
-  font-size: 30px;
+  font-size: 60px;
   font-weight: bold;
   text-transform: capitalize;
   font-family: Roboto;
@@ -260,14 +265,22 @@
           align-items: center;
 }
 
+.home .cardContainer .text {
+  text-transform: capitalize;
+  margin: 1rem 0;
+  font-family: grand;
+  font-size: 1.5rem;
+}
+
 .home .cardContainer .card {
   width: 90%;
   height: 50vh;
+  margin: 1rem 0;
   -webkit-box-shadow: 24px 48px 88px rgba(0, 0, 0, 0.3);
           box-shadow: 24px 48px 88px rgba(0, 0, 0, 0.3);
   -webkit-transform: perspective(1000px) rotateY(-13deg) rotateX(5deg) rotateZ(7deg) scaleY(0.9) scaleX(0.95) translateX(-3%) translateY(-3%);
           transform: perspective(1000px) rotateY(-13deg) rotateX(5deg) rotateZ(7deg) scaleY(0.9) scaleX(0.95) translateX(-3%) translateY(-3%);
-  background-color: unset;
+  background-color: #ECEFF1;
 }
 
 .home .cardContainer .card:hover {
@@ -287,7 +300,7 @@ body {
 
 header {
   position: fixed;
-  z-index: 2;
+  z-index: 50;
   width: 100%;
   padding: 1rem;
   height: 12vh;
@@ -316,5 +329,6 @@ a {
 
 main {
   padding-top: 5rem;
+  z-index: 1;
 }
 /*# sourceMappingURL=style.css.map */
