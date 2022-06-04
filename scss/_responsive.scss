@@ -23,6 +23,43 @@
             }
         }
     }
- 
+    .home{
+        padding:1rem;
+
+
+        //the home title
+        &Title{
+            font-size: 80px;
+            font-weight: bold;
+            text-transform: capitalize;
+            font-family: Roboto;
+            text-align: center;
+            
+        }
+        & .cardContainer{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 0;
+            flex-direction: row;
+            
+
+            & .card{
+                width: 45%;
+                height: 50vh;
+                box-shadow: 24px 48px 88px rgba(0,0,0,0.30);
+                transform: perspective(1000px) rotateY(-13deg) rotateX(5deg) rotateZ(7deg) scaleY(0.9) scaleX(0.95) translateX(-3%) translateY(-3%);
+                background-color: unset;
+    
+                &:hover{
+                    transform: none;
+                    @include transition-ease;
+                }
+            }   
+        }
+    }
+
+
+
 
 }
