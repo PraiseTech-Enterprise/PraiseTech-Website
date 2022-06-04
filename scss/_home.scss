@@ -1,0 +1,16 @@
+//the home section
+.home{
+    padding:1rem;
+
+
+    //the home title
+    &Title{
+        font-size: 25px;
+        font-weight: bold;
+        text-transform: capitalize;
+        font-family: Roboto;
+        text-align: center;
+    }
+
+
+}

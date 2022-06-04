@@ -1,0 +1,32 @@
+//store all your variables here
+
+$BgColor: #14232b;
+$TextColor: #FFFFFF;
+$test-color:red;
+$ShadowColor:#00000033;
+
+//for font family roboto
+@font-face {
+    font-family: "Roboto";
+    src: url("../assets/Roboto-Medium.ttf");
+}
+
+//this reset the margin ppading etc entire page 
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+//function for transition ease
+
+@mixin transition-ease {
+    transition: all .5s ease-in-out ;
+}
+
+//for responsiveness
+@mixin media-md {
+    @media screen and (min-width: 768px){
+        @content;
+    }
+}

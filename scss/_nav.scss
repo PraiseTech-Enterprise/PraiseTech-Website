@@ -1,0 +1,151 @@
+//the header section
+//please inform me before making changes
+//style for the comppany name and type
+.Company{
+    display: flex;
+    flex-direction: column;
+
+    //for the company name
+    &Name{
+        font-size: 2rem;
+        font-weight: bold;
+    }
+
+    //for the company type
+    &Type{
+        padding-top: 5px;
+        
+    }
+}
+
+//end of comppany name and type
+
+//this is for the menu button on phone veiw by default the button is hidden on laptop view
+.menuBtn{
+    position: absolute;
+    z-index: 1;
+    right: 1rem;
+    top: 1rem;
+    height: 20px;
+    width: 28px;
+    cursor: pointer;
+    @include transition-ease;
+
+
+    // the white hambuger button at the middle
+    &Burger{
+     position: absolute;
+     right: 0;
+     top:.5rem;
+     width: 25px;
+     height: 3px;
+     background:$TextColor;
+     @include transition-ease;
+
+     //the white hambuger at the top
+     &::before{
+         content: '';
+        position: absolute;
+        top: -8px;
+        width: 28px;
+        height: 3px;
+        background: $TextColor;
+        @include transition-ease;
+     }
+
+     //the white hamburger at the buttom
+     &::after{
+        content: '';
+        position: absolute;
+        top: 8px;
+        width: 20px;
+        height: 3px;
+        background: $TextColor;
+        @include transition-ease;
+     }
+
+     //what happens to the button when the nav displays
+     &.open{
+         transform: rotate(720deg);
+         background: transparent;
+
+         &::before{
+            transform:  rotate(45deg) translate(5px, 8px);
+         }
+         &::after{
+             width: 28px;
+            transform:  rotate(-45deg) translate(3px, -7px);
+         }
+     }
+    }
+}
+//end of menu button section 
+//beging of nav section
+.nav{
+    width: 100vw;
+    opacity: 0.98;
+    visibility: hidden;
+
+    &.open{
+        visibility: visible;
+    }
+
+    .menuNav{
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        width: 50%;
+        overflow: hidden;
+        background: $BgColor;
+        color:$TextColor;
+        list-style-type: none;
+        box-shadow: 0 15px 30px rgba(0,0,0,0.30),0 11px 8px rgba(0,0,0,0.22);
+
+        transform: translateX(100%);
+        @include transition-ease;
+        position: fixed;
+        top:0;
+        right: 0;
+
+        // border-bottom-left-radius: 5rem;
+        // border-bottom-right-radius: 5rem;
+        // border-top-left-radius: 5rem;
+        // border-top-right-radius: 5rem;
+
+        &.open{
+            transform: translateX(0);
+        }
+        &__item{
+            transform: translateX(100vw);
+           
+
+            &.open{
+                transform: translateX(0);
+            }
+            &.active >  a{
+                color: $test-color;
+            }
+        }
+
+        &Link{
+                display: inline-block;
+                font-size: 2rem;
+                text-transform: uppercase;
+                padding:2rem 0;
+                font-weight: 300;
+                
+
+                &:hover{
+                    color: $test-color;
+                    @include transition-ease;
+           }
+        }
+    }
+}
+// @for $i from 1 through 4 {
+//     .menuNavItem:nth-child(#{$i}){
+//         transition-delay: ($i * 0.1s) + 0.15s ;
+//     }
+// }

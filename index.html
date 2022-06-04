@@ -5,22 +5,51 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Praise Tech Enterprise</title>
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <div class="header">
-        <div class="logo">
-            <h1 class="companyName">PraiseTech</h1>
-            <p class="companyType">enterprise</p>
-        </div>  
-        
-        <div class="navLinks">
-            <ul class="links">
-                <li>Services</li>
-                <li>About</li>
-                <li>Products</li>
-            </ul>
+    <!-- The Header Section (please dont temper with this section) -->
+    <header>
+        <!-- the Company name at the top left hand side. -->
+        <div class="Company">
+            <div class="CompanyName">PraiseTech</div>
+            <div class="CompanyType">Enterprise</div>
         </div>
-    </div>
+        <!-- the nav section -->
+        <div class="FlexDiv">
+            <div class="menuBtn">
+                <span class="menuBtnBurger"></span>
+            </div>
+
+            <nav class="nav">
+                <ul class=" menuNav">
+                    <li class="menuNavItem" active>
+                        <a href="index.html" class="menuNavLink">home</a>
+                    </li>
+                    <li class="menuNavItem">
+                        <a href="#!" class="menuNavLink">about</a>
+                    </li>
+                    <li class="menuNavItem">
+                        <a href="#!" class="menuNavLink">project</a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- <div class="contact">
+                <button>Contact us</button>
+            </div> -->
+        </div>
+ 
+    </header>
+ 
+    <!-- the end of the header section -->
+    <!-- the home section goes here -->
+    <main>
+        <section class="home">
+            <div class="homeTitle">Praise tech Enterprise</div>
+        </section>
+    </main>
+    <!-- these script are for the javascript (NB we might need jquery later that why it was added) -->
+    <script src="./scripts/jquery.js"></script>
+    <script src="./scripts/main.js"></script>
 </body>
 </html>
