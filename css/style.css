@@ -189,6 +189,47 @@
   .nav .menuNavLink {
     font-size: 1.5rem;
   }
+  .home {
+    padding: 1rem;
+  }
+  .homeTitle {
+    font-size: 80px;
+    font-weight: bold;
+    text-transform: capitalize;
+    font-family: Roboto;
+    text-align: center;
+  }
+  .home .cardContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 1.5rem 0;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .home .cardContainer .card {
+    width: 45%;
+    height: 50vh;
+    -webkit-box-shadow: 24px 48px 88px rgba(0, 0, 0, 0.3);
+            box-shadow: 24px 48px 88px rgba(0, 0, 0, 0.3);
+    -webkit-transform: perspective(1000px) rotateY(-13deg) rotateX(5deg) rotateZ(7deg) scaleY(0.9) scaleX(0.95) translateX(-3%) translateY(-3%);
+            transform: perspective(1000px) rotateY(-13deg) rotateX(5deg) rotateZ(7deg) scaleY(0.9) scaleX(0.95) translateX(-3%) translateY(-3%);
+    background-color: unset;
+  }
+  .home .cardContainer .card:hover {
+    -webkit-transform: none;
+            transform: none;
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+  }
 }
 
 .home {
@@ -196,11 +237,44 @@
 }
 
 .homeTitle {
-  font-size: 25px;
+  font-size: 30px;
   font-weight: bold;
   text-transform: capitalize;
   font-family: Roboto;
   text-align: center;
+}
+
+.home .cardContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.home .cardContainer .card {
+  width: 90%;
+  height: 50vh;
+  -webkit-box-shadow: 24px 48px 88px rgba(0, 0, 0, 0.3);
+          box-shadow: 24px 48px 88px rgba(0, 0, 0, 0.3);
+  -webkit-transform: perspective(1000px) rotateY(-13deg) rotateX(5deg) rotateZ(7deg) scaleY(0.9) scaleX(0.95) translateX(-3%) translateY(-3%);
+          transform: perspective(1000px) rotateY(-13deg) rotateX(5deg) rotateZ(7deg) scaleY(0.9) scaleX(0.95) translateX(-3%) translateY(-3%);
+  background-color: unset;
+}
+
+.home .cardContainer .card:hover {
+  -webkit-transform: none;
+          transform: none;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
 }
 
 body {
@@ -241,6 +315,6 @@ a {
 }
 
 main {
-  padding-top: 15vh;
+  padding-top: 5rem;
 }
 /*# sourceMappingURL=style.css.map */
