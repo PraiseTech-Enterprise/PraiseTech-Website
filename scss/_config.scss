@@ -30,7 +30,12 @@ $ShadowColor:#00000033;
 
 //for responsiveness
 @mixin media-md {
-    @media screen and (min-width: 768px){
+    @media screen and (max-width: 768px){
+        @content;
+    }
+}
+@mixin media-xl {
+    @media screen and (max-width: 1600px){
         @content;
     }
 }

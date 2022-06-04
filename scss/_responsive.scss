@@ -1,64 +1,175 @@
-@include media-md{
+@include media-md {
+
     .menuBtn{
-        visibility: hidden;
-
-    }
-    .nav{
+        position: absolute;
+        z-index: 1;
+        right: 1rem;
+        top: 1rem;
+        height: 20px;
+        width: 28px;
+        cursor: pointer;
+        @include transition-ease;
         visibility: visible;
-
+    
+    
+        // the white hambuger button at the middle
+        &Burger{
+         position: absolute;
+         right: 0;
+         top:.5rem;
+         width: 25px;
+         height: 3px;
+         background:$TextColor;
+         @include transition-ease;
+    
+         //the white hambuger at the top
+         &::before{
+             content: '';
+            position: absolute;
+            top: -8px;
+            width: 28px;
+            height: 3px;
+            background: $TextColor;
+            @include transition-ease;
+         }
+    
+         //the white hamburger at the buttom
+         &::after{
+            content: '';
+            position: absolute;
+            top: 8px;
+            width: 20px;
+            height: 3px;
+            background: $TextColor;
+            @include transition-ease;
+         }
+    
+         //what happens to the button when the nav displays
+         &.open{
+             transform: rotate(720deg);
+             background: transparent;
+    
+             &::before{
+                transform:  rotate(45deg) translate(5px, 8px);
+             }
+             &::after{
+                 width: 28px;
+                transform:  rotate(-45deg) translate(3px, -7px);
+             }
+         }
+        }
+    }
+    //end of menu button section 
+    //beging of nav section
+    .nav{
+        width: 100vw;
+        opacity: 0.98;
+        visibility: hidden;
+    
+        &.open{
+            visibility: visible;
+        }
+    
         .menuNav{
-            display: block;
-            transform: translateY(0);
-            height: 100%;
-            background: transparent;
-            text-align: center;
-            box-shadow: none;
-
-            &Item{
-                display: inline;
-                padding-right: 1.5rem;
+            display: flex;
+            flex-flow: column wrap;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            width: 50%;
+            overflow: hidden;
+            background: $BgColor;
+            color:$TextColor;
+            list-style-type: none;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.30),0 11px 8px rgba(0,0,0,0.22);
+            transform: translateX(100%);
+            @include transition-ease;
+            position: fixed;
+            top:0;
+            right: 0;
+    
+            // border-bottom-left-radius: 5rem;
+            // border-bottom-right-radius: 5rem;
+            // border-top-left-radius: 5rem;
+            // border-top-right-radius: 5rem;
+    
+            &.open{
+                transform: translateX(0);
             }
+            &__item{
+                transform: translateX(100vw);
+               
+    
+                &.open{
+                    transform: translateX(0);
+                }
+                &.active >  a{
+                    color: $test-color;
+                }
+            }
+    
             &Link{
-                font-size: 1.5rem;
+                    display: inline-block;
+                    font-size: 2rem;
+                    text-transform: uppercase;
+                    padding:2rem 0;
+                    font-weight: 300;
+                    
+    
+                    &:hover{
+                        color: $test-color;
+                        @include transition-ease;
+               }
             }
         }
     }
+
+
+    //the home section
     .home{
         padding:1rem;
 
-        //the home title
-        &Title{
-            font-size: 80px;
-            font-weight: bold;
-            text-transform: capitalize;
-            font-family: Roboto;
-            text-align: center;
-            
-        }
-        & .cardContainer{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1.5rem 0;
-            flex-direction: row;
-            
 
-            & .card{
-                width: 45%;
-                height: 50vh;
-                box-shadow: 24px 48px 88px rgba(0,0,0,0.30);
-                transform: perspective(1000px) rotateY(-13deg) rotateX(5deg) rotateZ(7deg) scaleY(0.9) scaleX(0.95) translateX(-3%) translateY(-3%);
-                background-color: unset;
-    
-                &:hover{
-                    transform: none;
-                    @include transition-ease;
+        .heading{
+
+                &Title{
+                    display:flex;
+                    flex-direction: column !important;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 50px !important;
+                    font-weight: bold;
+                    text-transform: capitalize;
+                    font-family: Roboto;
+                    text-align: center;
+                    color:$TextColor;
+
+                    &Type{
+                        color: blue;
+                        padding-left: 0 !important;
+                    }
                 }
-            }   
+                & .text{
+                    text-transform: capitalize;
+                    margin:1rem 0;
+                    font-family: grand;
+                    font-size: 1.5rem;
+                    text-align:center;
+                }
+            }
+        
+        .ContainerFlex{
+            display:flex;
+            flex-direction: column-reverse !important;
+            justify-content: center !important;
+            align-items: center;
+
+            & .Card{
+                width: 90% !important;
+                background-color: $test-color;
+            }
         }
+
     }
-
-
-
-
 }
+        //the home title
