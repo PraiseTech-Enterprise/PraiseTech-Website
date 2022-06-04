@@ -3,43 +3,55 @@
         padding:1rem;
 
 
-        //the home title
-        &Title{
-            font-size: 60px;
-            font-weight: bold;
-            text-transform: capitalize;
-            font-family: Roboto;
-            text-align: center;
-        }
-        & .cardContainer{
-            display:flex;
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: center;
+        .heading{
 
+            &Title{
+                display:flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                font-size: 60px;
+                font-weight: bold;
+                text-transform: capitalize;
+                font-family: Roboto;
+                text-align: center;
+                color:$TextColor;
+
+                &Type{
+                    color: blue;
+                    padding-left: 10px;
+                }
+
+            }
             & .text{
                 text-transform: capitalize;
                 margin:1rem 0;
                 font-family: grand;
                 font-size: 1.5rem;
+                text-align:center;
             }
+        }
 
-            & .card{
-                width: 90%;
+        .ContainerFlex{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            margin: 2rem;
+
+            & .Card{
+                width: 45%;
                 height: 50vh;
-                margin:1rem 0;
                 box-shadow: 24px 48px 88px rgba(0,0,0,0.30);
                 transform: perspective(1000px) rotateY(-13deg) rotateX(5deg) rotateZ(7deg) scaleY(0.9) scaleX(0.95) translateX(-3%) translateY(-3%);
-                background-color: #ECEFF1;
-    
+                background-color: white;
+
                 &:hover{
                     transform: none;
-                    @include transition-ease;
+                    transition: all .5s ease-in-out;
                 }
-
             }
             
         }
+        
     }
-
-
