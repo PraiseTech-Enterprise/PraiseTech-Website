@@ -351,7 +351,8 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-background-color: #14232b;
+/*background-color: #14232b;*/
+backdrop-filter:  blur(30px);
 }
 
 a {
