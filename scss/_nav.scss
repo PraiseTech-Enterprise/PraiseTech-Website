@@ -1,60 +1,189 @@
-//the header section
-//please inform me before making changes
-//style for the comppany name and type
-.Company{
-    display: flex;
-    flex-direction: column;
-
-    //for the company name
-    &Name{
-        font-size: 2rem;
-        font-weight: bold;
-    }
-
-    //for the company type
-    &Type{
-        padding-top: 5px;
-        
-    }
-}
-
-//end of comppany name and type
-
-//this is for the menu button on phone veiw by default the button is hidden on laptop view
 .menuBtn{
-    visibility: hidden;
-
-}
-.nav{
+    position: absolute;
+    z-index: 1;
+    right: 1rem;
+    top: 1rem;
+    height: 20px;
+    width: 28px;
+    cursor: pointer;
+    @include transition-ease;
     visibility: visible;
 
-    .menuNav{
-        display: block;
-        transform: translateY(0);
-        height: 100%;
-        background: transparent;
-        text-align: center;
-        box-shadow: none;
 
-        &Item{
-            display: inline;
-            padding-right: 1.5rem;
+    // the white hambuger button at the middle
+    &Burger{
+     position: absolute;
+     right: 0;
+     top:.5rem;
+     width: 20px;
+     height: 4px;
+     background:$TextColor;
+     @include transition-ease;
+     border-radius:1rem;
+     
+     //the white hambuger at the top
+     &::before{
+         content: '';
+        position: absolute;
+        top: -8px;
+        width: 28px;
+        height: 4px;
+        border-radius:1rem;
+        background: $TextColor;
+        @include transition-ease;
+     }
+
+     //the white hamburger at the buttom
+     &::after{
+        content: '';
+        position: absolute;
+        top: 8px;
+        width: 28px;
+        height: 4px;
+        border-radius:1rem;
+        background: $TextColor;
+        @include transition-ease;
+     }
+
+     //what happens to the button when the nav displays
+     &.open{
+         transform: rotate(720deg);
+         background: transparent;
+
+         &::before{
+            transform:  rotate(45deg) translate(5px, 8px);
+         }
+         &::after{
+             width: 28px;
+            transform:  rotate(-45deg) translate(3px, -7px);
+         }
+     }
+    }
+}
+//end of menu button section 
+//beging of nav section
+.nav{
+    width: 100vw;
+    visibility: hidden;
+
+    &.open{
+        visibility: visible;
+
+    }
+    .CompanyName{
+        position: fixed;
+        width: 120px;
+        height: 39px;
+        left: 2rem;
+        top:2rem;
+        text-transform: capitalize;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bolder;
+        font-size: 20px;
+        line-height: 19px;
+        color:$TextColor;
+        z-index: 999;
+    }
+    .circle{
+        position: fixed;
+        left: 8rem;
+        top:1.8rem;
+        width: 1.5rem;
+        height: 1.5rem;
+        background: $PrimaryColor;
+        border-radius: 50%;
+    }
+    .menuNav{
+        display: flex;
+        flex-flow: column wrap;
+        // align-items: center;
+        text-align: center;
+        // justify-content: center;
+        height: 90vh;
+        width: 100%;
+        overflow: hidden;
+        background: $BgColor;
+        color:$TextColor;
+        list-style-type: none;
+        transform: translateY(100%);
+        @include transition-ease;
+        z-index: 1;
+        position: fixed;
+        top: 5.5rem;
+        right: 0;
+
+
+        &.open{
+            transform: translateY(0%);
         }
-        &Link{
-            font-size: 1.5rem;
-            text-transform: uppercase;
-            padding:2rem 0;
-            font-weight: 300;
-            
-            &:hover{
-                color: $test-color;
-                @include transition-ease;
+        &__item{
+            transform: translateX(50vw);
+              
+            &.open{
+                transform: translateX(0);
             }
+            &.active >  a{
+                color: $test-color;
+            }
+        }
+
+        &Link{
+                display: inline-block;
+                font-size: 2rem;
+                text-transform: capitalize;
+                margin-top: 1rem;
+                padding:5px 0;
+                font-family: Arial, Helvetica, sans-serif;
+                font-style: normal;
+                font-weight: 600;
+                text-align: center;
+
+                &:hover{
+                    color: $test-color;
+                    @include transition-ease;
+           }
+
+        }
+        &Button{
+            background: $PrimaryColor;
+            margin-top: 1rem;
+            outline: none;
+            border: none;
+            border-radius: 8px;
+            @include shadow;
+            width: 8rem;
+            height: 2rem;
+            color: $BgColor;
+            font-size: 20px;
+            font-weight: bolder;
+        }
+
+        .designOne{
+            position: fixed;
+            width: 204.88px;
+            height: 241px;
+            right: 0px;
+            bottom: 8rem;
+        }
+        .designTwo{
+            position: fixed;
+            width: 40.17px;
+            height: 113px;
+            left: 5rem;
+            bottom: 8rem;
+        }
+        .designThree{
+            position: fixed;
+            width: 89.3px;
+            height: 108.46px;
+            right: 4rem;
+            bottom: 0rem;
+            transform: matrix(0.99, 0.18, -0.12, 0.98, 0, 0);
         }
     }
 }
-// @for $i from 1 through 4 {
-//     .menuNavItem:nth-child(#{$i}){
-//         transition-delay: ($i * 0.1s) + 0.15s ;
-//     }
-// }
+@for $i from 1 through 4 {
+    .menuNavItem:nth-child(#{$i}){
+        transition-delay: ($i * 0.1s) + 0.15s ;
+    }
+}
