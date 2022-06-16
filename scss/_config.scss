@@ -1,9 +1,10 @@
 //store all your variables here
 
-$BgColor: #14232b;
-$TextColor: #FFFFFF;
+$BgColor:#E5E5E5;
+$TextColor: #000000;
+$PrimaryColor:#ED521E;
 $test-color:red;
-$ShadowColor:#00000033;
+$ShadowColor:rgba(250, 3, 3, 0.08) ;
 
 //for font family roboto
 @font-face {
@@ -27,7 +28,14 @@ $ShadowColor:#00000033;
 @mixin transition-ease {
     transition: all .5s ease-in-out ;
 }
-
+@mixin center-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin shadow {
+    box-shadow: 0px 4px 0px 3px $ShadowColor;
+}
 //for responsiveness
 @mixin media-md {
     @media screen and (max-width: 768px){
