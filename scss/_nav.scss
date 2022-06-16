@@ -1,63 +1,3 @@
-// // //the header section
-// // //please inform me before making changes
-// // //style for the comppany name and type
-// // .Company{
-// //     display: flex;
-// //     flex-direction: column;
-
-// //     //for the company name
-// //     &Name{
-// //         font-size: 2rem;
-// //         font-weight: bold;
-// //     }
-
-// //     //for the company type
-// //     &Type{
-// //         padding-top: 5px;
-        
-// //     }
-// // }
-
-// // //end of comppany name and type
-
-// // //this is for the menu button on phone veiw by default the button is hidden on laptop view
-// // .menuBtn{
-// //     visibility: hidden;
-
-// // }
-// // .nav{
-// //     visibility: visible;
-
-// //     .menuNav{
-// //         display: block;
-// //         transform: translateY(0);
-// //         height: 100%;
-// //         background: transparent;
-// //         text-align: center;
-// //         box-shadow: none;
-
-// //         &Item{
-// //             display: inline;
-// //             padding-right: 1.5rem;
-// //         }
-// //         &Link{
-// //             font-size: 1.5rem;
-// //             text-transform: uppercase;
-// //             padding:2rem 0;
-// //             font-weight: 300;
-            
-// //             &:hover{
-// //                 color: $test-color;
-// //                 @include transition-ease;
-// //             }
-// //         }
-// //     }
-// // }
-// // // @for $i from 1 through 4 {
-// // //     .menuNavItem:nth-child(#{$i}){
-// // //         transition-delay: ($i * 0.1s) + 0.15s ;
-// // //     }
-// // // }
 .menuBtn{
     position: absolute;
     z-index: 1;
@@ -130,7 +70,29 @@
         visibility: visible;
 
     }
-
+    .CompanyName{
+        position: fixed;
+        width: 120px;
+        height: 39px;
+        left: 2rem;
+        top:2rem;
+        text-transform: capitalize;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bolder;
+        font-size: 20px;
+        line-height: 19px;
+        color:$TextColor;
+        z-index: 999;
+    }
+    .circle{
+        position: fixed;
+        left: 8rem;
+        top:1.8rem;
+        width: 1.5rem;
+        height: 1.5rem;
+        background: $PrimaryColor;
+        border-radius: 50%;
+    }
     .menuNav{
         display: flex;
         flex-flow: column wrap;
@@ -191,7 +153,11 @@
             @include shadow;
             width: 8rem;
             height: 2rem;
+            color: $BgColor;
+            font-size: 20px;
+            font-weight: bolder;
         }
+
         .designOne{
             position: fixed;
             width: 204.88px;
@@ -214,5 +180,10 @@
             bottom: 0rem;
             transform: matrix(0.99, 0.18, -0.12, 0.98, 0, 0);
         }
+    }
+}
+@for $i from 1 through 4 {
+    .menuNavItem:nth-child(#{$i}){
+        transition-delay: ($i * 0.1s) + 0.15s ;
     }
 }

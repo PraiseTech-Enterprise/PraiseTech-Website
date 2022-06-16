@@ -12,10 +12,7 @@
   <div class="HeaderContainer">
     <header>
         <!-- the Company name at the top left hand side. -->
-        <!-- <div class="Company">
-            <div class="CompanyName">PraiseTech</div>
-            <div class="CompanyType">Enterprise</div>
-        </div> -->
+
         <!-- the nav section -->
         <div class="FlexDiv">
             <div class="menuBtn">
@@ -23,7 +20,10 @@
             </div>
 
             <nav class="nav">
-                <ul class=" menuNav">
+                <div class="CompanyName">Praise Tech enterprise</div> 
+                <span class="circle"></span>
+
+                <ul class=" menuNav">                    
                     <li class="menuNavItem" active>
                         <a href="./" class="menuNavLink">home</a>
                     </li>
@@ -35,16 +35,12 @@
                     </li>
                     <li class="menuNavItem">
                         <button class="menuNavButton">contact us</button>
-                        <!-- <a href="#!" class="menuNavItemBton">Contact Us</a> -->
                     </li>
                     <img src="./assets/img/design1.png" alt="" class="designOne">
                     <img src="./assets/img/design2.png" alt="" class="designTwo">
                     <img src="./assets/img/design3.png" alt="" class="designThree">
                 </ul>
             </nav>
-            <!-- <div class="contact">
-                <button>Contact us</button>
-            </div> -->
         </div>
  
     </header>
@@ -53,7 +49,12 @@
     <!-- the end of the header section -->
     <!-- the home section goes here -->
     <main>
-
+        <section class="Home">
+            <div class="HomeHeadingContainer">
+                <div class="HeadingText">Praise Tech Enterprise<span class="circle"></span></div>
+                <img src="./assets/img/hand-shake.png" alt="" class="HeadingImage">
+            </div>
+        </section>
     </main>
     <!-- these script are for the javascript (NB we might need jquery later that why it was added) -->
     <script src="./scripts/jquery.js"></script>

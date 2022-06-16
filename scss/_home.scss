@@ -1,0 +1,39 @@
+.Home{
+    padding: 1rem;
+
+    &HeadingContainer{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        padding: 2rem 0;
+
+        .HeadingText{
+            font-size: 40px;
+            font-weight: bolder;
+            font-family: Roboto;
+            width: 50%;
+            z-index: 900;
+            line-height: 50px;
+            .circle{
+                // position: absolute;
+                // left: 5rem;
+                // top:11rem;
+                // width: 2.5rem;
+                // height: 2.5rem;
+                position: absolute;
+                width: 27px;
+                height: 27px;
+                left: 95px;
+                top: 185px;
+                background: $PrimaryColor;
+                border-radius: 50%;
+                z-index: 1;
+            }
+        }
+
+        .HeadingImage{
+            width: 155px;
+            height: 94px;
+        }
+    }
+}

@@ -1,11 +1,6 @@
 @font-face {
   font-family: "Roboto";
-  src: url("../assets/Roboto-Medium.ttf");
-}
-
-@font-face {
-  font-family: "Grand";
-  src: url("../assets/grand.ttf");
+  src: url("../assets/fonts/Roboto-Black.ttf");
 }
 
 * {
@@ -90,6 +85,31 @@
   visibility: visible;
 }
 
+.nav .CompanyName {
+  position: fixed;
+  width: 120px;
+  height: 39px;
+  left: 2rem;
+  top: 2rem;
+  text-transform: capitalize;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+  font-size: 20px;
+  line-height: 19px;
+  color: #000000;
+  z-index: 999;
+}
+
+.nav .circle {
+  position: fixed;
+  left: 8rem;
+  top: 1.8rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: #ED521E;
+  border-radius: 50%;
+}
+
 .nav .menuNav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -162,6 +182,9 @@
           box-shadow: 0px 4px 0px 3px rgba(250, 3, 3, 0.08);
   width: 8rem;
   height: 2rem;
+  color: #E5E5E5;
+  font-size: 20px;
+  font-weight: bolder;
 }
 
 .nav .menuNav .designOne {
@@ -188,6 +211,67 @@
   bottom: 0rem;
   -webkit-transform: matrix(0.99, 0.18, -0.12, 0.98, 0, 0);
           transform: matrix(0.99, 0.18, -0.12, 0.98, 0, 0);
+}
+
+.menuNavItem:nth-child(1) {
+  -webkit-transition-delay: 0.25s;
+          transition-delay: 0.25s;
+}
+
+.menuNavItem:nth-child(2) {
+  -webkit-transition-delay: 0.35s;
+          transition-delay: 0.35s;
+}
+
+.menuNavItem:nth-child(3) {
+  -webkit-transition-delay: 0.45s;
+          transition-delay: 0.45s;
+}
+
+.menuNavItem:nth-child(4) {
+  -webkit-transition-delay: 0.55s;
+          transition-delay: 0.55s;
+}
+
+.Home {
+  padding: 1rem;
+}
+
+.HomeHeadingContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  padding: 2rem 0;
+}
+
+.HomeHeadingContainer .HeadingText {
+  font-size: 40px;
+  font-weight: bolder;
+  font-family: Roboto;
+  width: 50%;
+  z-index: 900;
+  line-height: 50px;
+}
+
+.HomeHeadingContainer .HeadingText .circle {
+  position: absolute;
+  width: 27px;
+  height: 27px;
+  left: 95px;
+  top: 185px;
+  background: #ED521E;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.HomeHeadingContainer .HeadingImage {
+  width: 155px;
+  height: 94px;
 }
 
 body {
