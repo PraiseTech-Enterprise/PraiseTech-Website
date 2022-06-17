@@ -40,8 +40,8 @@
   height: 20px;
   width: 28px;
   cursor: pointer;
-  -webkit-transition: all .5s ease-in-out;
-  transition: all .5s ease-in-out;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
   visibility: visible;
 }
 
@@ -52,8 +52,8 @@
   width: 20px;
   height: 4px;
   background: #000000;
-  -webkit-transition: all .5s ease-in-out;
-  transition: all .5s ease-in-out;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
   border-radius: 1rem;
 }
 
@@ -65,8 +65,8 @@
   height: 4px;
   border-radius: 1rem;
   background: #000000;
-  -webkit-transition: all .5s ease-in-out;
-  transition: all .5s ease-in-out;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
 }
 
 .menuBtnBurger::after {
@@ -77,8 +77,8 @@
   height: 4px;
   border-radius: 1rem;
   background: #000000;
-  -webkit-transition: all .5s ease-in-out;
-  transition: all .5s ease-in-out;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
 }
 
 .menuBtnBurger.open {
@@ -153,8 +153,8 @@
   list-style-type: none;
   -webkit-transform: translateY(100%);
           transform: translateY(100%);
-  -webkit-transition: all .5s ease-in-out;
-  transition: all .5s ease-in-out;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
   z-index: 1;
   position: fixed;
   top: 5.5rem;
@@ -194,8 +194,8 @@
 
 .nav .menuNavLink:hover {
   color: red;
-  -webkit-transition: all .5s ease-in-out;
-  transition: all .5s ease-in-out;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
 }
 
 .nav .menuNavButton {
@@ -349,18 +349,25 @@
 
 .projects {
   width: 80vw;
-  margin: 2rem auto 0 auto;
+  margin: 0 auto 0 auto;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-  grid-gap: 2rem;
+  grid-gap: 8px;
 }
 
 .projects .projectItems {
   position: relative;
   overflow: hidden;
   cursor: pointer;
+}
+
+.projects .projectItems:hover {
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
 }
 
 .projects .projectItems img {

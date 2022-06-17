@@ -78,16 +78,20 @@
 //   }
     .projects{
         width: 80vw;
-        margin: 2rem auto 0 auto;
+        margin: 0 auto 0 auto;
         display: grid;
         grid-template-columns: 1fr;
-        grid-gap: 2rem;
+        grid-gap: 8px;
 
         .projectItems{
             position: relative;
             overflow: hidden;
             cursor: pointer;
 
+            &:hover{
+              transform:scale(.8);
+              @include transition-ease;
+            }
             img {
                 width: 100%;
                 height:80%;
