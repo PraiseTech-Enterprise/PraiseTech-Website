@@ -3,6 +3,7 @@
 $BgColor:#E5E5E5;
 $TextColor: #000000;
 $PrimaryColor:#ED521E;
+$SecondaryColor:#FFFFFF;
 $test-color:red;
 $ShadowColor:rgba(250, 3, 3, 0.08) ;
 
@@ -12,6 +13,14 @@ $ShadowColor:rgba(250, 3, 3, 0.08) ;
     src: url("../assets/fonts/Roboto-Black.ttf");
 }
 
+@keyframes ScaleIn{
+    from{
+        transform: scale(.5);
+    }
+    to{
+        transform: scale(1);
+    }
+}
 
 //this reset the margin ppading etc entire page 
 
@@ -23,15 +32,24 @@ $ShadowColor:rgba(250, 3, 3, 0.08) ;
 //function for transition ease
 
 @mixin transition-ease {
-    transition: all .5s ease-in-out ;
+    transition: all 1s ease-in-out ;
 }
 @mixin center-div {
     display: flex;
     justify-content: center;
     align-items: center;
 }
+@mixin side-div {
+    display: flex;
+    flex-direction: row;
+}
 @mixin shadow {
     box-shadow: 0px 4px 0px 3px $ShadowColor;
+}
+
+@mixin scaleAnime {
+    animation: ScaleIn 3s linear 1s;
+    @include transition-ease;
 }
 //for responsiveness
 @mixin media-md {

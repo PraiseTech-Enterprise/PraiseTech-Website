@@ -14,8 +14,12 @@ body{
     line-height: 1;
 }
 .HeaderContainer{
-    background-color: $test-color !important;
+    background: $BgColor !important;
     @include center-div;
+    width: 100% !important;
+    height: 5.5rem;
+    position: fixed;
+    z-index: 99999;
 }
 header{
     position: fixed;

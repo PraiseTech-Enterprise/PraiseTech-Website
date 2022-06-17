@@ -65,9 +65,13 @@
 .nav{
     width: 100vw;
     visibility: hidden;
+    overflow-x: hidden;
+    position:fixed;
 
     &.open{
         visibility: visible;
+        overflow-x: hidden;
+        position:fixed;
 
     }
     .CompanyName{

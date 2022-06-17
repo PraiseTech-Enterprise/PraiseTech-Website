@@ -3,6 +3,28 @@
   src: url("../assets/fonts/Roboto-Black.ttf");
 }
 
+@-webkit-keyframes ScaleIn {
+  from {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes ScaleIn {
+  from {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -18,8 +40,8 @@
   height: 20px;
   width: 28px;
   cursor: pointer;
-  -webkit-transition: all .5s ease-in-out;
-  transition: all .5s ease-in-out;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
   visibility: visible;
 }
 
@@ -30,8 +52,8 @@
   width: 20px;
   height: 4px;
   background: #000000;
-  -webkit-transition: all .5s ease-in-out;
-  transition: all .5s ease-in-out;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
   border-radius: 1rem;
 }
 
@@ -43,8 +65,8 @@
   height: 4px;
   border-radius: 1rem;
   background: #000000;
-  -webkit-transition: all .5s ease-in-out;
-  transition: all .5s ease-in-out;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
 }
 
 .menuBtnBurger::after {
@@ -55,8 +77,8 @@
   height: 4px;
   border-radius: 1rem;
   background: #000000;
-  -webkit-transition: all .5s ease-in-out;
-  transition: all .5s ease-in-out;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
 }
 
 .menuBtnBurger.open {
@@ -79,10 +101,14 @@
 .nav {
   width: 100vw;
   visibility: hidden;
+  overflow-x: hidden;
+  position: fixed;
 }
 
 .nav.open {
   visibility: visible;
+  overflow-x: hidden;
+  position: fixed;
 }
 
 .nav .CompanyName {
@@ -127,8 +153,8 @@
   list-style-type: none;
   -webkit-transform: translateY(100%);
           transform: translateY(100%);
-  -webkit-transition: all .5s ease-in-out;
-  transition: all .5s ease-in-out;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
   z-index: 1;
   position: fixed;
   top: 5.5rem;
@@ -168,8 +194,8 @@
 
 .nav .menuNavLink:hover {
   color: red;
-  -webkit-transition: all .5s ease-in-out;
-  transition: all .5s ease-in-out;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
 }
 
 .nav .menuNavButton {
@@ -233,11 +259,130 @@
           transition-delay: 0.55s;
 }
 
-.Home {
-  padding: 1rem;
+.Home1 {
+  height: 250px;
+  position: relative;
 }
 
-.HomeHeadingContainer {
+.Home1 .h1 {
+  font-weight: bold;
+  font-family: "roboto";
+  position: relative;
+  font-size: 38px;
+}
+
+.col1 {
+  position: relative;
+}
+
+.Home1 .Circle1 {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #ED521E;
+  position: absolute;
+  top: calc(50% - 15px);
+  left: 50%;
+  z-index: -1;
+}
+
+.color-primary {
+  color: #ED521E;
+}
+
+.build {
+  font-family: "roboto";
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.bgc-primary {
+  background-color: #ED521E;
+  color: #fff;
+}
+
+.Home1 a {
+  text-decoration: none;
+}
+
+.Home1 a button {
+  font-weight: 600;
+  width: 60%;
+  -webkit-box-shadow: 3px 6px rgba(0, 0, 0, 0.1);
+          box-shadow: 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.Home2 {
+  position: relative;
+  overflow: hidden;
+}
+
+.Home2 .h2, .Home3 .h2 {
+  font-weight: bold;
+  padding: 0;
+}
+
+.write-up1 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.imgContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.lineStyle {
+  width: 171.41px;
+  height: 17.01px;
+}
+
+.projects {
+  width: 80vw;
+  margin: 0 auto 0 auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  grid-gap: 8px;
+}
+
+.projects .projectItems {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.projects .projectItems:hover {
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+.projects .projectItems img {
+  width: 100%;
+  height: 80%;
+  border-radius: 8px;
+}
+
+.projects .projectItems .textFlex {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -245,33 +390,10 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  width: 100%;
-  padding: 2rem 0;
-}
-
-.HomeHeadingContainer .HeadingText {
-  font-size: 40px;
-  font-weight: bolder;
-  font-family: Roboto;
-  width: 50%;
-  z-index: 900;
-  line-height: 50px;
-}
-
-.HomeHeadingContainer .HeadingText .circle {
-  position: absolute;
-  width: 27px;
-  height: 27px;
-  left: 95px;
-  top: 185px;
-  background: #ED521E;
-  border-radius: 50%;
-  z-index: 1;
-}
-
-.HomeHeadingContainer .HeadingImage {
-  width: 155px;
-  height: 94px;
+  position: relative;
+  bottom: 3rem;
+  color: #E5E5E5;
+  padding: 0 1rem;
 }
 
 body {
@@ -283,7 +405,7 @@ body {
 }
 
 .HeaderContainer {
-  background-color: red !important;
+  background: #E5E5E5 !important;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -293,6 +415,10 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 100% !important;
+  height: 5.5rem;
+  position: fixed;
+  z-index: 99999;
 }
 
 header {
