@@ -1,39 +1,106 @@
-.Home{
-    padding: 1rem;
 
-    &HeadingContainer{
-        display: flex;
-        flex-direction: row;
-        width: 100%;
-        padding: 2rem 0;
+.Home1{
+    height:250px;
+    position:relative;
+   
+  }
+  .Home1 .h1{
+    font-weight: bold;
+    font-family: "roboto";
+    position:relative;
+    font-size: 38px;
+  }
+  .col1{
+    position: relative;
+  }
+  .Home1 .Circle1{
+    width:24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #ED521E;
+    position: absolute;
+    top:calc(50% - 15px);
+    left:50%;
+    z-index: -1;
+  }
+  .color-primary{
+    color:#ED521E;
+  }
+  
+  .build{
+    font-family: "roboto";
+    font-size: 15px;
+    font-weight: 700;
+  }
+  .bgc-primary{
+    background-color: #ED521E;
+    color:#fff;
+  }
+  
+  .Home1 a{
+    text-decoration: none;
+  }
+  .Home1 a button{
+    font-weight: 600;
+    width:60%;
+    box-shadow: 3px 6px rgba(0,0,0,0.1)
+  }
+  
+  .Home2{
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .Home2 .h2, .Home3 .h2{
+    font-weight: bold;
+    padding: 0;
+  }
+  
+  
+  .write-up1{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .imgContainer{
+      @include center-div;
+  }
+  .lineStyle{
+    width: 171.41px;
+    height: 17.01px;
 
-        .HeadingText{
-            font-size: 40px;
-            font-weight: bolder;
-            font-family: Roboto;
-            width: 50%;
-            z-index: 900;
-            line-height: 50px;
-            .circle{
-                // position: absolute;
-                // left: 5rem;
-                // top:11rem;
-                // width: 2.5rem;
-                // height: 2.5rem;
-                position: absolute;
-                width: 27px;
-                height: 27px;
-                left: 95px;
-                top: 185px;
-                background: $PrimaryColor;
-                border-radius: 50%;
-                z-index: 1;
+  }
+//   #lib{
+//     position: relative;
+//     left:-15px;
+//   }
+    .projects{
+        width: 80vw;
+        margin: 2rem auto 0 auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 2rem;
+
+        .projectItems{
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+
+            img {
+                width: 100%;
+                height:80%;
+                border-radius: 8px;
+            }
+            .textFlex{
+                justify-content:space-between;
+                align-items:center;
+                @include side-div;
+                position:relative;
+                bottom: 3rem;
+                color:$BgColor;
+                padding:0 1rem;
             }
         }
-
-        .HeadingImage{
-            width: 155px;
-            height: 94px;
-        }
     }
-}
