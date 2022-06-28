@@ -17,14 +17,14 @@
     width:24px;
     height: 24px;
     border-radius: 50%;
-    background-color: #ED521E;
+    background-color:$PrimaryColor;
     position: absolute;
     top:calc(50% - 15px);
     left:50%;
     z-index: -1;
   }
   .color-primary{
-    color:#ED521E;
+    color:$PrimaryColor;
   }
   
   .build{
@@ -33,7 +33,7 @@
     font-weight: 700;
   }
   .bgc-primary{
-    background-color: #ED521E;
+    background-color:$PrimaryColor;
     color:#fff;
   }
   

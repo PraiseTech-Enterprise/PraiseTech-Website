@@ -132,7 +132,7 @@
   top: 1.8rem;
   width: 1.5rem;
   height: 1.5rem;
-  background: #ED521E;
+  background: #0E47A1;
   border-radius: 50%;
 }
 
@@ -199,7 +199,7 @@
 }
 
 .nav .menuNavButton {
-  background: #ED521E;
+  background: #0E47A1;
   margin-top: 1rem;
   outline: none;
   border: none;
@@ -279,7 +279,7 @@
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  background-color: #ED521E;
+  background-color: #0E47A1;
   position: absolute;
   top: calc(50% - 15px);
   left: 50%;
@@ -287,7 +287,7 @@
 }
 
 .color-primary {
-  color: #ED521E;
+  color: #0E47A1;
 }
 
 .build {
@@ -297,7 +297,7 @@
 }
 
 .bgc-primary {
-  background-color: #ED521E;
+  background-color: #0E47A1;
   color: #fff;
 }
 
